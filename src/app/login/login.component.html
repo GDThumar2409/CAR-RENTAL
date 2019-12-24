@@ -1,0 +1,65 @@
+<div class="container">
+    
+    
+    
+    
+    
+    
+  <div class="card bg-light">
+  <article class="card-body mx-auto" style="max-width: 400px;">
+      <h4 class="card-title mt-3 text-center">Log In</h4>
+      
+      <form [formGroup]="myForm">
+      
+
+      <div class="form-group input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+           </div>
+          <input name="email_id" formControlName="email_id" class="form-control" placeholder="Email address" type="email" [(ngModel)]="email_id">
+          
+      </div> <!-- form-group// -->
+          
+      <div class="form-group input-group">
+        <div *ngIf="myForm.get('email_id').errors?.userNameExists">
+            😺 Email is Valid!
+          </div>
+          <div *ngIf="myForm.get('email_id').pending">
+            Checking...
+          </div>
+          <div *ngIf="!myForm.get('email_id').errors?.userNameExists">
+            😢 Not Valid Email Please Sign Up!
+          </div>
+      </div> 
+
+      <div class="form-group input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+          <input name="password" formControlName="password" class="form-control" placeholder="Create password" type="password" [(ngModel)]="password">
+      </div> <!-- form-group// -->                                  
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block" (click)="validate()"> Log In  </button>
+      </div> <!-- form-group// -->
+      <!-- <div *ngIf="myForm.get('email_id').pending">
+        Checking...
+      </div> -->
+
+      <!-- <span *ngIf="form.get('name').pending"> (searching)</span> -->
+
+      <!-- <div *ngIf="myForm.get('email_id').errors?.userNameExists">
+        😺 Email is Valid!
+      </div> -->
+    
+      <!-- <div *ngIf="myForm.get('email_id').errors && myForm.get('email').errors.emailTaken">
+        😢 Oh noes, this email is already taken!
+      </div>       -->
+      <p class="text-center">Have an account? <a href="">Create Account</a> </p>                                                                 
+  </form>
+  </article>
+  </div> <!-- card.// -->
+  
+  </div> 
+  <!--container end.//-->
+  
+  

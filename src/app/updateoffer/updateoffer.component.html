@@ -1,0 +1,20 @@
+<app-topnav></app-topnav>
+        <!-- [formGroup] = "uploadForm" -->
+        <button type="button" class="btn btn-success" routerLink="/offers">Go To Home</button>
+        <form >
+          <div class="form-group" >
+            <label for="carname">Offer Name:</label>
+            <input type="text" class="form-control" id="carname" placeholder="Offer Name" name="name" [(ngModel)]="name">
+          </div>
+          <div class="form-group">
+            <label for="carclass">Offer Discount:</label>
+            <input type="text"  class="form-control" id="carclass" placeholder="Offer Discount" name="discount" [(ngModel)]="discount">
+          </div>
+          <div class="form-group">
+            <label for="carclass">Offer Discription:</label>
+            <input type="text"  class="form-control" id="carclass" placeholder="Car Discription" name="discription" [(ngModel)]="discription">
+          </div>
+          <button type="submit" class="btn btn-default" (click)="updateoffer({'name':name,'Discount':discount,'Discription':discription})">Submit</button>
+        </form>
+      
+  

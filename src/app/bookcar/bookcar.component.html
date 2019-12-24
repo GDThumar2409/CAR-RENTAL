@@ -1,0 +1,57 @@
+<app-header></app-header>
+<br/>
+<br/>
+<br/>
+<!-- <div class="container" *ngFor="let icars of cars"> -->
+    
+    <!-- <div class="card-deck mx-auto" *ngFor="let car of cars"> -->
+      <div class="card bg-light mx-auto" style="width:400px" *ngFor="let car of cars">
+          <img class="card-img-top" src="../../assets/adminphotos/{{car.photoname}}" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">{{car.name}}</h4>
+            <p class="card-text">
+            <i class="fas fa-gas-pump"></i>{{car.fuelType}} &nbsp;&nbsp; &nbsp; &nbsp;
+            <i class="fa fa-cogs" aria-hidden="true"></i>{{car.transmission}} &nbsp;&nbsp; &nbsp; &nbsp;
+            <i class="fa fa-users" aria-hidden="true"></i>{{car.seats}} &nbsp;&nbsp;
+            </p>
+            <a routerLink="/checkout/{{car.name}}" class="btn btn-primary">BOOK</a>
+          </div>
+          <br/>
+          <br/>
+      </div>
+      <!-- <div class="card bg-light" style="width:400px">
+          <img class="card-img-top" src="Altok10.png" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Maruti Alto K10</h4>
+      <p class="card-text">
+      <i class="fas fa-gas-pump"></i>Diesel &nbsp;&nbsp; &nbsp; &nbsp;
+      <i class="fa fa-cogs" aria-hidden="true"></i>Manual &nbsp;&nbsp; &nbsp; &nbsp;
+      <i class="fa fa-users" aria-hidden="true"></i>5 Seats &nbsp;&nbsp;
+      </p>
+      <a href="#" class="btn btn-primary">BOOK</a>
+          </div>
+      </div>
+      <div class="card bg-light" style="width:400px">
+          <img class="card-img-top" src="Creta.png" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Hyundai Creta</h4>
+      <p class="card-text">
+      <i class="fas fa-gas-pump"></i>Diesel &nbsp;&nbsp; &nbsp; &nbsp;
+      <i class="fa fa-cogs" aria-hidden="true"></i>Manual &nbsp;&nbsp; &nbsp; &nbsp;
+      <i class="fa fa-users" aria-hidden="true"></i>5 Seats &nbsp;&nbsp;
+      </p>
+            <a href="#" class="btn btn-primary">BOOK</a>
+          </div>
+      </div>-->
+    <!-- </div> -->
+
+    <br/>
+
+    
+
+
+  <!-- </div> -->
+  <br/>
+  <br/>
+
+  <app-footer></app-footer>

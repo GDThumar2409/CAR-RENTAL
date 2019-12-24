@@ -1,0 +1,34 @@
+<app-topnav></app-topnav>
+        <!-- [formGroup] = "uploadForm" -->
+        <button type="button" class="btn btn-success" routerLink="/carhome">Go To Home</button>
+        <form >
+          <div class="form-group" >
+            <label for="carname">Car Name:</label>
+            <input type="text" class="form-control" id="carname" placeholder="Car Name" name="name" [(ngModel)]="name">
+          </div>
+          <div class="form-group">
+            <label for="carclass">Car Class:</label>
+            <input type="text"  class="form-control" id="carclass" placeholder="Car Class" name="class" [(ngModel)]="class">
+          </div>
+          <div class="form-group">
+            <label for="fuel">Fuel Type:</label>
+            <input type="text" class="form-control" id="fueltype" placeholder="Fuel Type" name="fuelType" [(ngModel)]="fuelType">
+          </div>
+          <div class="form-group">
+            <label for="transmission">Transmission:</label>
+            <input type="text" class="form-control" id="transmission" placeholder="Transmission" name="transmission" [(ngModel)]="transmission">
+          </div>
+          <div class="form-group">
+            <label for="seats">Seats:</label>
+            <input type="number" class="form-control" id="seats" placeholder="Seats" name="seats"[(ngModel)]="seats"> 
+          </div>
+          <div class="form-group">
+            <label for="carimage">Car Image:</label>
+            <input type="file" name="photo" class="form-control-file" id="carimage" ng2FileSelect [uploader]="uploader" (change)="onFileChange($event)"> 
+          </div>
+          <button type="submit" class="btn btn-default"
+          (click)="uploader.uploadAll()" 
+  [disabled]="!uploader.getNotUploadedItems().length"  (click)="addcar({'name':name,'class':class,'fuelType':fuelType,'transmission':transmission,'seats':seats})">Submit</button>
+        </form>
+      
+  

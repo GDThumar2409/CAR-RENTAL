@@ -1,0 +1,33 @@
+<app-topnav></app-topnav>
+
+<button type="button" class="btn btn-success" routerLink="/addcar">ADD CAR</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>class</th>
+            <th>fuelType</th>
+            <th>photoname</th>
+            <th>seats</th>
+            <th>image</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars">
+            <td>{{ car.name}}</td>
+            <td>{{ car.class}}</td>
+            <td>{{ car.fuelType}}</td>
+            <td>{{ car.photoname }}</td>
+            <td>{{car.seats}}</td>
+            <td><a href="../../assets/adminphotos/{{car.photoname}}">Show</a></td>
+            <td>
+                <button type="button" class="btn btn-success" routerLink="/updatecar/{{car.name}}">Update</button>
+                <button type="button" class="btn btn-danger" (click)="delete(car.photoname)">Delete</button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+

@@ -1,0 +1,255 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">G & J</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ws" scrollTo="#ws">Why Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#team" scrollTo="#team">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" data-toggle="modal" data-target="#exampleModalCenter">Book A Car</a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link" routerLink="/alloffers">Show Offers</a>
+       </li>
+      </ul>
+      <!-- <span *ngIf="!ck; else elseblock">
+         <i class="fas fa-sign-out-alt"></i>Sign Up
+      </span> -->
+      <!-- <ng-template *ngIf="!check; elseblock"> -->
+         <span *ngIf="!check" class="navbar-text">
+            <a routerLink="/signup" ><i class="fas fa-sign-out-alt"></i>Sign Up</a>
+          </span>
+    
+          <span *ngIf="!check" class="navbar-text">
+             <a routerLink="/login"><i class="fas fa-sign-out-alt"></i>Login</a>
+           </span>
+      <!-- </ng-template> -->
+      <!-- <ng-template #elseblock> -->
+            <span *ngIf="check" class="navbar-text">
+                  <a (click)="logout()" style="cursor:pointer"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </span>
+         <span *ngIf="check" class="navbar-text">
+            <a routerLink="/login"><i class="fa fa-user"></i>{{ email_id }}</a>
+          </span>
+      <!-- </ng-template> -->
+      
+    </div>
+  </nav>
+
+  <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Enter Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+     <div class="panel panel-primary">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="form-group">
+                      <div class="input-container">
+                      <i class="fa fa-user icon"></i>
+                      <input class="input-field" type="text" placeholder="FirstName" [(ngModel)]="firstname">
+                      </div>
+                 </div>
+              </div>
+              <div class="col-md-6">
+                 <div class="form-group">
+                    <div class="input-container">
+                      <i class="fa fa-user icon"></i>
+                      <input class="input-field" type="text" placeholder="LastName" [(ngModel)]="lastname">
+                      </div>
+                 </div>
+              </div>
+           </div>
+           <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-container">
+                      <i class="fa fa-envelope icon"></i>
+                      <input class="input-field" type="text" placeholder="Email" [(ngModel)]="email_id">
+                      </div>
+                 </div>  
+                  
+                 </div>
+              
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-container">
+                      <i class="fa fa-phone icon"></i>
+                      <input class="input-field" type="text" placeholder="Phone No." [(ngModel)]="phoneno">
+                      </div>
+                 </div>  
+                  
+                 </div>
+           </div>
+           
+           <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-container">
+                      <i class="fa fa-key icon"></i>
+                      <input class="input-field" type="text" placeholder="Password" [(ngModel)]="password">
+                      </div>
+                 </div>  
+                  
+                 </div>
+              
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="input-container">
+                      <i class="fa fa-key icon"></i>
+                      <input class="input-field" type="text" placeholder="Repeat Password" [(ngModel)]="rpassword">
+                      </div>
+                 </div>  
+                  
+                 </div>
+           </div>
+        </div>
+     </div>
+  <!--</div> -->
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-primary" (click)="addUser({'email_id':email_id,'firstname':firstname,'lastname':lastname,'phoneno':phoneno,'password':password})">Submit</button>
+        </div>
+        <router-outlet></router-outlet>
+        </div></div></div>
+        
+        
+        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-modal-parent="#exampleModalCenter1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Enter Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!--<div class="container"> -->
+     <div class="panel panel-primary">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="form-group">
+                      <div class="input-container">
+                      <i class="fa fa-user icon"></i>
+                      <input class="input-field" type="text" placeholder="UserName" name="usrnm">
+                      </div>
+                 </div>
+              </div>
+              <div class="col-md-6">
+                 <div class="form-group">
+                    <div class="input-container">
+                      <i class="fa fa-user icon"></i>
+                      <input class="input-field" type="text" placeholder="Email or Phone No." name="usrnm">
+                      </div>
+                 </div>
+              </div>
+           </div>
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="form-group">
+                      <div class="input-container">
+                      <i class="fa fa-key icon"></i>
+                      <input class="input-field" type="text" placeholder="Password" name="usrnm">
+                      </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Enter Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!--<div class="container"> -->
+     <div class="panel panel-primary">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+         
+           <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">End Time</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                       <input type='time' class="form-control" [(ngModel)]="endtime" />
+                    </div>
+                 </div>   
+                  
+                 </div>
+              
+              <div class='col-md-6'>
+                 <div class="form-group">
+                    <label class="control-label">End Date</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                       <input type='date' class="form-control" [(ngModel)]="enddate"/>
+                       <span class="input-group-addon">
+                       <span class="glyphicon glyphicon-calendar"></span>
+                       </span>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label" >Start Time</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                       <input type='time' class="form-control" [(ngModel)]="starttime"/>
+                    </div>
+                 </div>   
+                  
+                 </div>
+              
+              <div class='col-md-6'>
+                 <div class="form-group">
+                    <label class="control-label" >Start Date</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                       <input type='date' class="form-control" [(ngModel)]="startdate"/>
+                       <span class="input-group-addon">
+                       <span class="glyphicon glyphicon-calendar"></span>
+                       </span>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  <!--</div> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" data-dismiss="modal" (click)="addtotrip({'endtime':endtime,'enddate':enddate,'starttime':starttime,'startdate':startdate})" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

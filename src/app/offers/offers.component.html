@@ -1,0 +1,29 @@
+<app-topnav></app-topnav>
+
+<button type="button" class="btn btn-success" routerLink="/addoffer">ADD CAR</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>Discount</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let offer of offers">
+            <td>{{ offer.name}}</td>
+            <td>{{ offer.Discount}}</td>
+            <td>{{ offer.Discription}}</td>
+            
+            <td>
+                <button type="button" class="btn btn-success" routerLink="/updateoffer/{{offer.name}}">Update</button>
+                <button type="button" class="btn btn-danger" (click)="delete(offer.name)">Delete</button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+
